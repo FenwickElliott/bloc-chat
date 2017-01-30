@@ -5,5 +5,5 @@
 
     angular
         .module('blocChat')
-        .controller('LandingCtrl', LandingCtrl);
+        .controller('LandingCtrl', ['Room', LandingCtrl]);
 })();
