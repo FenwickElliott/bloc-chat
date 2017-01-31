@@ -1,7 +1,5 @@
-<h1>{{landing.placeHolder}}</h1>
+<h1>Bloc Chat</h1>
 
-<!-- {{rooms}} -->
-
-<p ng-repeat="room in rooms">
-    {{room}}
-</P>
+<ul>
+    <li ng-repeat="room in rooms">{{room.$value}}</li>
+</ul>
