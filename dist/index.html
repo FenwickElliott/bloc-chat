@@ -7,7 +7,23 @@
 </head>
 <body ng-controller="LandingCtrl">
 
-    <ui-view></ui-view>
+    <h1>Charles' Bloc Chat Eporium.</h1>
+
+    <div class="leftDiv">
+        <ul>
+            <li ng-repeat="room in rooms">{{room.$value}}</li>
+        </ul>
+
+        <button ng-click="add()">
+            Creat New Room
+        </button>
+
+        <button ng-click="remove()">
+            Remove Last Room
+        </button>
+    </div>
+
+    <!-- <ui-view></ui-view> -->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
