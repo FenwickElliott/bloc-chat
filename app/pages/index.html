@@ -10,17 +10,18 @@
     <h1>Charles' Bloc Chat Eporium.</h1>
 
     <div class="leftDiv">
-        <ul>
-            <li ng-repeat="room in rooms">{{room.$value}}</li>
-        </ul>
 
         <button ng-click="add()">
             Creat New Room
         </button>
 
         <button ng-click="remove()">
-            Remove Last Room
+            Remove Oldest Room
         </button>
+
+        <ul>
+            <li ng-repeat="room in rooms">{{room.$value}}</li>
+        </ul>
     </div>
 
     <!-- <ui-view></ui-view> -->

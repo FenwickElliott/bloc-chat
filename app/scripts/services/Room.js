@@ -11,7 +11,9 @@
         }
 
         $rootScope.remove = function(){
+            if(confirm("Are you sure?")){
             rooms.$remove(rooms[0]);
+            }
         }
 
         return {
