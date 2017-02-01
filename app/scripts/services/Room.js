@@ -5,6 +5,14 @@
         $rootScope.rooms = rooms;
         // this.rooms = rooms;
 
+        $rootScope.add = function(){
+            rooms.$add("photon");
+        }
+
+        $rootScope.remove = function(){
+            rooms.$remove(rooms[0]);
+        }
+
         return {
             all: rooms
         };
