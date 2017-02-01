@@ -6,7 +6,8 @@
         // this.rooms = rooms;
 
         $rootScope.add = function(){
-            rooms.$add("photon");
+            newName = prompt("New Chat Room Name?");
+            rooms.$add(newName);
         }
 
         $rootScope.remove = function(){
