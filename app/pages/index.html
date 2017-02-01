@@ -9,7 +9,7 @@
 
     <h1>Charles' Bloc Chat Eporium.</h1>
 
-    <div class="leftDiv">
+    <aside class="leftDiv">
 
         <button ng-click="add()">
             Creat New Room
@@ -22,9 +22,11 @@
         <ul>
             <li ng-repeat="room in rooms">{{room.$value}}</li>
         </ul>
-    </div>
+    </aside>
 
-    <!-- <ui-view></ui-view> -->
+    <div class="messages">
+
+    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
