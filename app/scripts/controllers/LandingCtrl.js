@@ -1,7 +1,6 @@
 (function() {
     function LandingCtrl(Room) {
         this.Room = Room;
-        console.log(Room);
     }
 
 
