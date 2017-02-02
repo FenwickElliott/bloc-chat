@@ -15,6 +15,9 @@
     </ul>
 </aside>
 
-<div class="messages" ng-controller="ModalCtrl">
-
+<div class="messages" ng-controller="ModalCtrl as modal">
+    <button ng-click="modal.open()">New message</button>
+    <br/>
+    <br/>
+    {{modal.message}}
 </div>
