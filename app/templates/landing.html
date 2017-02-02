@@ -1,2 +1,28 @@
-<button><a ui-sref="up">Up</a></button>
-<button><a ui-sref="down">Down</a></button>
+<h1>Charles' Bloc Chat Eporium.</h1>
+
+<aside class="leftDiv">
+
+    <button ng-click="landing.Room.add()">
+        Creat New Room
+    </button>
+
+    <button ng-click="landing.Room.remove()">
+        Remove Latest Room
+    </button>
+
+    <ul>
+        <li ng-repeat="room in landing.Room.all">{{room.$value}}</li>
+    </ul>
+</aside>
+
+<div class="messages">
+
+</div>
+
+
+
+
+
+
+<!-- <button><a ui-sref="up">Up</a></button>
+<button><a ui-sref="down">Down</a></button> -->

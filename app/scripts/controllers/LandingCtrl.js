@@ -1,9 +1,10 @@
 (function() {
     function LandingCtrl(Room) {
-        this.placeHolder = "Meerkats 4 Eva!!!";
+        this.Room = Room;
+        console.log(Room);
     }
 
-    
+
 
     angular
         .module('blocChat')

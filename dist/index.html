@@ -5,28 +5,10 @@
     <title>Bloc Chat</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body ng-controller="LandingCtrl">
+<body>
 
-    <h1>Charles' Bloc Chat Eporium.</h1>
-
-    <aside class="leftDiv">
-
-        <button ng-click="add()">
-            Creat New Room
-        </button>
-
-        <button ng-click="remove()">
-            Remove Oldest Room
-        </button>
-
-        <ul>
-            <li ng-repeat="room in rooms">{{room.$value}}</li>
-        </ul>
-    </aside>
-
-    <div class="messages">
-        <ui-view><ui-view>
-    </div>
+    <ui-view><ui-view>
+    
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>

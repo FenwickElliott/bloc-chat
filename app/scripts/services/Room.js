@@ -1,27 +1,26 @@
 (function() {
-    function Room($rootScope, $firebaseArray) {
+    function Room($firebaseArray) {
         var ref = firebase.database().ref().child("rooms");
         var rooms = $firebaseArray(ref);
-        $rootScope.rooms = rooms;
+        var Room = {};
+        Room.all = rooms;
         // this.rooms = rooms;
 
-        $rootScope.add = function(){
+        Room.add = function(){
             newName = prompt("New Chat Room Name?");
             rooms.$add(newName);
         }
 
-        $rootScope.remove = function(){
+        Room.remove = function(){
             if(confirm("Are you sure?")){
-            rooms.$remove(rooms[0]);
+            rooms.$remove(rooms[rooms.length-1]);
             }
         }
 
-        return {
-            all: rooms
-        };
+        return Room;
     }
 
   angular
     .module('blocChat')
-    .factory('Room', ['$rootScope', '$firebaseArray', Room]);
+    .factory('Room', ['$firebaseArray', Room]);
 })();
