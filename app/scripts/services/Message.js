@@ -18,7 +18,7 @@
         Message.add = function(){
             newMessage = prompt("Message Content:");
             Message.messages.$add({
-                username: "Charles",
+                username: Message.user,
                 content: newMessage,
                 roomId: Message.roomId
             });
