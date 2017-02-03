@@ -1,7 +1,7 @@
 (function() {
     function Message($firebaseArray) {
         var Message = {};
-        Message.roomId = "-Kc4NAYeTuW4XXzMl59A";
+        Message.roomId = "-Kc4R2HAwmJi-RjejSDr";
 
         var ref = firebase.database().ref().child("messages");
         var messages = $firebaseArray(ref);
@@ -12,9 +12,14 @@
             Message.messages.$add({
                 username: "Charles",
                 content: newMessage,
-                sentAt: "noon",
                 roomId: Message.roomId
             });
+        }
+
+        Message.clear = function(){
+            if(confirm("Are you sure?")){
+                messages.$remove(messages[messages.length-1]);
+            }
         }
 
         return Message;

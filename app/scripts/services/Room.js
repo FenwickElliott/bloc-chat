@@ -3,7 +3,7 @@
         var ref = firebase.database().ref().child("rooms");
         var rooms = $firebaseArray(ref);
         var Room = {};
-        Room.all = rooms;
+        Room.rooms = rooms;
 
         Room.add = function(){
             newName = prompt("New Chat Room Name?");
@@ -15,9 +15,6 @@
             rooms.$remove(rooms[rooms.length-1]);
             }
         }
-
-        Room.rooms = rooms;
-
 
         return Room;
     }
