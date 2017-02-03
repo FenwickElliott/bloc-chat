@@ -4,7 +4,6 @@
         var rooms = $firebaseArray(ref);
         var Room = {};
         Room.all = rooms;
-        // this.rooms = rooms;
 
         Room.add = function(){
             newName = prompt("New Chat Room Name?");
@@ -16,6 +15,16 @@
             rooms.$remove(rooms[rooms.length-1]);
             }
         }
+
+        var reff = ref.child("down");
+        var down = $firebaseArray(reff);
+
+        console.log(reff);
+        console.log(down);
+
+        Room.down = down;
+
+
 
         return Room;
     }
