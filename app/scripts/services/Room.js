@@ -16,20 +16,10 @@
             }
         }
 
-        var reff = ref.child("down");
-        var down = $firebaseArray(reff);
-
-        console.log(reff);
-        console.log(down);
-
-        Room.down = down;
-
-
-
         return Room;
     }
 
-  angular
-    .module('blocChat')
-    .factory('Room', ['$firebaseArray', Room]);
+    angular
+        .module('blocChat')
+        .factory('Room', ['$firebaseArray', Room]);
 })();

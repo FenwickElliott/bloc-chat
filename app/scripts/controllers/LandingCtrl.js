@@ -1,11 +1,9 @@
 (function() {
-    function LandingCtrl(Room, Message) {
+    function LandingCtrl(Room) {
         this.Room = Room;
-        this.Message = Message;
-        console.log(Message.$value);
     }
 
     angular
         .module('blocChat')
-        .controller('LandingCtrl', ['Room', 'Message', LandingCtrl]);
+        .controller('LandingCtrl', ['Room', LandingCtrl]);
 })();
