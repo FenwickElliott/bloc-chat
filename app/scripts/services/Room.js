@@ -16,6 +16,9 @@
             }
         }
 
+        Room.rooms = rooms;
+
+
         return Room;
     }
 

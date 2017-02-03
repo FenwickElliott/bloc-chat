@@ -1,12 +1,18 @@
 (function() {
     function Message($firebaseArray) {
         var ref = firebase.database().ref().child("rooms");
-        var reff = ref.child("down");
-        var message = $firebaseArray(reff);
+        var reff = ref.child("-Kc4BrRJyw9FAg6Jrchw");
+        var messages = $firebaseArray(reff);
         var Message = {};
-        Message.all = message;
+        Message.all = messages;
 
-        console.log(message);
+        Message.up = $firebaseArray(ref.child("-Kc4BrRJyw9FAg6Jrchw"))
+
+        Message.addUp = function(){
+            newName = prompt("Message Content:");
+            Message.up.$add(newName);
+        }
+
         return Message;
     }
 
