@@ -1,11 +1,14 @@
 (function() {
     function Message($firebaseArray) {
         var Message = {};
-        Message.roomId = "-Kc4R2HAwmJi-RjejSDr";
+        Message.roomId = "-Kc4R7JHhhN92ENxEYnT";
 
         var ref = firebase.database().ref().child("messages");
-        var messages = $firebaseArray(ref);
+        var filtered = ref.orderByChild("roomId").equalTo(Message.roomId)
+        var messages = $firebaseArray(filtered);
         Message.messages = messages;
+
+
 
         Message.add = function(){
             newMessage = prompt("Message Content:");
