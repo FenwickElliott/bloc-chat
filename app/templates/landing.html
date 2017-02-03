@@ -11,10 +11,11 @@
     </button>
 
     <ul>
-        <!-- <li ng-repeat="room in landing.Room.all">{{room.$value}}</li> -->
-        <button ng-repeat="room in landing.Room.rooms">
-            {{room.$value}}
-        </button>
+        <li ng-repeat="room in landing.Room.rooms">
+            <button ng-click="landing.Message.changeRoom(room.$id)">
+                {{room.$value}}
+            </button>
+        </li>
     </ul>
 </aside>
 
@@ -31,7 +32,3 @@
             {{msg.content}}
         </li>
 </div>
-
-<ul>
-    <li ng-repeat="room in landing.Room.rooms">{{room.$id}}</li>
-</ul>

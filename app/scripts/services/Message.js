@@ -1,14 +1,19 @@
 (function() {
     function Message($firebaseArray) {
         var Message = {};
-        Message.roomId = "-Kc4R7JHhhN92ENxEYnT";
+        Message.roomId = "-Kc4R2HAwmJi-RjejSDr";
 
-        var ref = firebase.database().ref().child("messages");
-        var filtered = ref.orderByChild("roomId").equalTo(Message.roomId)
-        var messages = $firebaseArray(filtered);
-        Message.messages = messages;
+        Message.setRoom = function(){
+            var ref = firebase.database().ref().child("messages");
+            var filtered = ref.orderByChild("roomId").equalTo(Message.roomId)
+            Message.messages = $firebaseArray(filtered);
+        }
+        Message.setRoom();
 
-
+        Message.changeRoom = function(newRoomId){
+            Message.roomId = newRoomId;
+            Message.setRoom();
+        }
 
         Message.add = function(){
             newMessage = prompt("Message Content:");
@@ -21,10 +26,9 @@
 
         Message.clear = function(){
             if(confirm("Are you sure?")){
-                messages.$remove(messages[messages.length-1]);
+                Message.messages.$remove(Message.messages[Message.messages.length-1]);
             }
         }
-
         return Message;
     }
 
