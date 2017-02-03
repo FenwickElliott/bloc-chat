@@ -17,12 +17,12 @@
 
 
 <div class="messages">
-    <button ng-click="landing.Message.addUp()">
+    <button ng-click="landing.Message.add()">
         New Message
     </button>
     <ul>
-        <li ng-repeat="msg in landing.Message.up">
-            {{msg.$value}}
+        <li ng-repeat="msg in landing.Message.messages">
+            {{msg.content}}
         </li>
 </div>
 
