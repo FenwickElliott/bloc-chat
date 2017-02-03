@@ -15,60 +15,15 @@
     </ul>
 </aside>
 
-<!-- <div class="messages" ng-controller="ModalCtrl as modal">
-    <button ng-click="modal.open()">New message</button>
-    <br/>
-    <br/>
-    {{modal.message}}
-    {{landing.Room.down.$value}}
-</div>
-
-<div>
-    <p>
-        Here: {{landing.Messag}}
-    </p>
-</div> -->
 
 <div class="messages">
+    <button ng-click="landing.Message.addUp()">
+        New Message
+    </button>
     <ul>
         <li ng-repeat="msg in landing.Message.up">
             {{msg.$value}}
         </li>
 </div>
 
-
-<p>Room.all: {{landing.Room.rooms[0].$id}}</p>
-
-
-<!-- <p>Room.all: {{landing.Room.all}}</p>
-<p>Room.all[2].$value: {{landing.Room.all[2].$value}}</p>
-<p>Room.all[2].$id: {{landing.Room.all[2].$id}}</p>
-
-<hr/>
-
-<p>Message.all: {{landing.Message.all}}</p>
-<p>Message.all[0].$value: {{landing.Message.all[0].$value}}</p>
-<p>Message.all[0].$id: {{landing.Message.all[0].$id}}</p>
-
-<hr/> -->
-
-
-
-
-<button ng-click="landing.Message.addUp()">
-    New Message
-</button>
-<!-- <div>
-    <p>{{landing.Message.x}}
-<hr/>
-<div>
-    <p>landing.Room.all: {{landing.Room.all}}</p>
-    <p>landing.Room.all[0].$value: {{landing.Room.all[0].$value}}</p>
-    <p>landing.Room.all[1]: {{landing.Room.all[1]}}</p>
-</div>
-<hr/>
-<div>
-    <p>landing.Message.all: {{landing.Message.all}}</p>
-    <p>landing.Message.all[0].$value: {{landing.Message.all[0].$value}}</p>
-    <p>landing.Message.all[1]: {{landing.Message.all[1]}}</p>
-</div> -->
+{{landing.Message.roomId}}
